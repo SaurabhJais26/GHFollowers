@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GHFollowers
 //
-//  Created by Saurabh Jaiswal on 28/11/24.
+//  Created by Saurabh Jaiswal on 29/11/24.
 //
 
 import Foundation
