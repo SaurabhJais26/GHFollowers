@@ -27,6 +27,16 @@ class FollowerListVC: UIViewController {
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
+    init(username: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.username = username
+        title = username
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -120,7 +130,7 @@ class FollowerListVC: UIViewController {
                 PersistenceManager.updatedWith(favorite: favorite, actionType: .add) { [ weak self ] error in
                     guard let self = self else { return }
                     guard let error = error else {
-                        self.presentGFAlertOnMainThread(title: "Success!", message: "You have successfully added \(favorite.login) to your favorites .", buttonTitle: "Hooray!")
+                        self.presentGFAlertOnMainThread(title: "Success!", message: "You have successfully added \(favorite.login) to your favorites 🎉.", buttonTitle: "Hooray!")
                         return
                     }
                     self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
