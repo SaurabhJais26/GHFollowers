@@ -49,7 +49,6 @@ class UserInfoVC: GFDataLoadingVC {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
-        
     }
     
     
