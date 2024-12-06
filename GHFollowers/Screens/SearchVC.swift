@@ -42,7 +42,7 @@ class SearchVC: UIViewController {
         
         guard isUsernameEntered else {
             print("No username entered")
-            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😀.", buttonTitle: "Ok")
+            presentGFAlert(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😀.", buttonTitle: "Ok")
             return
         }
         
